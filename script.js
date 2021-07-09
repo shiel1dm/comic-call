@@ -3,13 +3,17 @@ srcBtn = $('.button')
 userInput= $('input')
 test = userInput.val()
 publicKey = '77eadb0de3c81dae60d3ca584d03a73c'
-privateKey = '418d55284383ba9c9da775e688ebbd6c4faeffdd'
 ts = '1'
+
 
 md5= '0f81566c5546a9103f75756ab08b8f92'
 
 
 //Functions
+function getrandInt(length){
+  return Math.floor(Math.random() * length)
+}
+
 function MarApi(event){
     event.preventDefault()
     
@@ -24,11 +28,14 @@ function MarApi(event){
           return response.json();
         })
         .then(function(data){
+          i = getrandInt(data.data.results.length)
+          character= data.data.results
           console.log(data)
           console.log(userInput.val())
+          console.log(getrandInt(character.length))//generates random int, but logging for test purposes.
+          console.log(character[i])//grabs random character from array
+
         })
-  
-  
     
 }
 
