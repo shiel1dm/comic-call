@@ -34,21 +34,25 @@ function getrandInt(length){
               hero= character[i].name
               url = character[i].thumbnail.path
               ext = character[i].thumbnail.extension
-              image= url+$.trim('.'+ext)
+              image= url+$.trim('/portrait_uncanny.'+ext)
               description= character[i].description
+              urls= character[i].urls
+      
               
               console.log(getrandInt(character.length)) //generates random int, but logging for test purposes.
               console.log(character[i]) //grabs random character from array
               console.log(hero)  // logs the character name that was chosen
               console.log(image) //logs the final combined image URL
+              console.log(urls)
+
 
 
               let output = "";
               output = `
               <div>
                 <h2 class= "bold"><strong>${hero}</strong></h2>
-                <p class= "desc">${description}<p>
                 <img class= "marImg" src=${image} alt="image" />
+                <p class= "desc Body">${description}</p>
                </div> 
               `
               container.innerHTML += output
