@@ -1,3 +1,19 @@
+
+
+* {
+
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.title {
+    font-size: 180px;
+}
+.subtitle {
+    font-size: 40px;
+}
+
 section {
     padding: 100px 0;
 }
@@ -81,6 +97,7 @@ section {
     align-items: center;
     justify-content: center;
 }
+
 
 
 
