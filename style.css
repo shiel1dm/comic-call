@@ -1,4 +1,5 @@
 
+
 * {
 
     font-family: 'Bangers', cursive;
@@ -12,3 +13,93 @@
 .subtitle {
     font-size: 40px;
 }
+
+section {
+    padding: 100px 0;
+}
+.characters {
+    font-family: sans-serif;
+    background: white;
+    color: black;
+    position: relative;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.characters .carousel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.characters .carousel .left {
+    width: 45%;
+}
+.characters .carousel .left .card{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.characters .carousel .right{
+      width: 55%;
+}
+.characters .carousel .right .card{
+      font-size: 55px;
+      font-weight: 600;
+      margin-bottom: 10px;
+}
+.characters .carousel .right .card .text span{
+      color: red;
+}
+.characters .carousel .right p {
+      text-align: justify;
+}
+.characters .carousel .card {
+      width:calc(33% - 23px);
+      background: black;
+      text-align: center;
+      border-radius: 7px;
+      padding: 10px 20px;
+      cursor:pointer;
+      transition: all 0.4s ease;
+      margin: 15px 7px;
+}
+.characters .carousel .card .box {
+    font-size: 25px;
+    color: red;
+    margin: 10px 0 ;
+}
+.characters .carousel .card .text {
+    font: size 25px;
+    font-weight: 400;
+}
+
+.characters .carousel .card .box {
+    transition: all 0.4s ease;
+}
+.characters .carousel .card :hover .box {
+    transform: scale(1.06);
+}
+.characters .carousel .card .box .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 20px 7px 15px 7px;
+    margin-bottom: 10px;
+    padding: 40px;
+}
+.characters .carousel .card .box {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+

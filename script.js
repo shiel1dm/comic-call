@@ -30,10 +30,15 @@ function MarApi(event){
         .then(function(data){
           i = getrandInt(data.data.results.length)
           character= data.data.results
-          console.log(data)
-          console.log(userInput.val())
-          console.log(getrandInt(character.length))//generates random int, but logging for test purposes.
-          console.log(character[i])//grabs random character from array
+          hero= character[i].name
+          url = character[i].thumbnail.path
+          ext = character[i].thumbnail.extension
+          image= url+$.trim('.'+ext)
+          
+          console.log(getrandInt(character.length)) //generates random int, but logging for test purposes.
+          console.log(character[i]) //grabs random character from array
+          console.log(hero)
+          
 
         })
     
