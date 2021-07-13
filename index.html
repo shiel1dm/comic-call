@@ -6,73 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Marvel Comic Calls</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
   </head>
   <body> 
 
-
-    <section class="hero is-medium has-background-dark">
-      <div class="hero-body has-text-centered comicCall">
-        <h1 class="title has-text-grey-lighter is-size-1 comicCall">
+    <section class="container is-max-widescreen has-background-dark">
+      <div class="hero-body has-text-centered">
+        <h1 class="title has-text-light">
          COMIC-CALL
         </h1>
-        <p class="subtitle has-text-danger is-size-4 welcome">
+        <p class="subtitle has-text-danger is-size-2 is-family-code">
           Welcome Marvel Fans!
         </p>
       </div>
     </section>
+
     <section class="section columns block">
-      <div class="container column is-centered is-two-thirds">
-
-
-        <p class="subtitle is-centered column">
-          Search your favorite Marvel characters to learn where you can find more!
-        </p>
-        <form class="box">
-          <div class="field">
-            <label class="label">Search by Marvel charater</label>
-            <div class="control">
-              <input class="input is-focused is large" type="search" placeholder="Search">
+      <div class="container column is-centered is-three-quarters has-text-centered">
+        <p class="subtitle is-centered">
+            Search your favorite Marvel characters to learn where you can find more!
+            </p>
+            <form class="box">
+              <div class="field">
+                <label class="label is-size-4 is-family-code">Search by Marvel character</label>
+                <div class="control">
+                <input class="input is-focused is large is-danger" type="search" placeholder="Search">
+              </div>
             </div>
-          </div>
-          <button class="button is-primary is-medium is-outlined is-centered">Search</button>
+          <button class="button is-dark is-fullwidth is-centered is-family-code">Search</button>
         </form>
 
-      </section>
+      </div>
+    </section>
+      
+    <div id= "marvelImg">  </div>
 
-      <div id= "marvelImg">  </div>
-
-      <section class="hero is-danger">
-        <div class="hero-body has-text-centered">
-          <p class="title is-centered">
-           POPULAR CHARACTERS
-          </p>
-          <p class="subtitle is-centered">
-            Click on an image
-          </p>
-          <div id="popular1"> </div>
-      </section>
+    <section class="carousel columns block">
+      <div class="container column is-centered is-three-quarters has-text-centered">
+        <div class="notification is-danger">
+          <p class="title is-size-1 has-text-light"> POPULAR CHARACTERS</p>
+            <p class="subtitle is-size-4 has-text-dark is-family-monospace">Click on an image</p>
+        </div>
+      </div>
+    </section>
+  
 
 
 <!-- ***** This is the Carousel Demo template code on Bulma website that we can adjust if needed or just create our own.***** -->
 <section class="characters" id="characters">
         <div class="max-width">
             <div class="carousel">
-                <div class="card popular1">
+                <div class="card">
                       <div class="box">
                           <img src="#" alt="" >
                           <div class="text">popular characters</div>
                       </div>
                 </div>
-              <div class="card popular2">
+              <div class="card">
                   <div class="box">
                       <img src="#" alt="" >
                       <div class="text">popular characters</div>
                   </div>
               </div>
               <div class="card">
-                  <div class="box popular3">
+                  <div class="box">
                       <img src="#" alt="" >
                       <div class="text">popular characters</div>
                   </div>
@@ -107,12 +108,14 @@
     </script>
 <!-- ***** This is the Carousel Demo template code on Bulma website that we can adjust if needed.***** -->   
   </body>
-  <footer> 
-    <h3 class="attribution">Data provided by Marvel. © 2021 MARVEL</h3>
-  </footer>
+
+  <div class="container is-max-widescreen has-text-danger has-background-dark">
+    <footer class= "is-size-4 is-family-code">
+       <h3 class="attribution">Data provided by Marvel. © 2021 MARVEL</h3>
+    </footer>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="./script.js"></script>
   
 </html>
-

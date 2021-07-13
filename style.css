@@ -1,5 +1,20 @@
+
+* {
+
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.title {
+    font-size: 180px;
+}
+.subtitle {
+    font-size: 40px;
+}
+
 section {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 .characters {
     font-family: sans-serif;
@@ -126,15 +141,6 @@ Body {
     align-items: center;
 }
 
-.attribution {
-    text-align: center;
-    font-size:large;
-    font-weight:bolder;
-    background-color: #ED1D24;
-    color: black;
-    padding: 1.5rem; 
-}
-
 .welcome {
     color: #ED1D24;
 }
@@ -142,6 +148,7 @@ Body {
 .title .subtitle {
     text-align: center;
 }
+
 
 
 
