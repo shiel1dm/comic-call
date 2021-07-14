@@ -49,11 +49,13 @@ function getrandInt(length){
 
               let output = "";
               output = `
-              <div>
-                <h2 class= "bold"><strong>${hero}</strong></h2>
+              <div class="container column is-centered is-two-thirds has-text-centered mt-0 py-0">
+              <div class="notification has-background-danger">
+                <h2 class= "title is-size-1"><strong class="has-text-white">${hero}</strong></h2>
                 <img class= "marImg" src=${image} alt="image" />
-                <p class= "desc Body">${description}</p>
+                <p class= "desc Body has-text-white">${description}</p>
                </div> 
+               </div>
               `
               container.innerHTML += output
             })

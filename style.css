@@ -7,14 +7,16 @@
 }
 
 .title {
-    font-size: 180px;
-}
-.subtitle {
-    font-size: 40px;
+    font-size: 140px;
 }
 
+.pop {
+    font-size: 60px;
+}
+
+
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 .characters {
     font-family: sans-serif;
