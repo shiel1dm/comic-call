@@ -19,9 +19,11 @@ function handleSubmit(event) {
       console.log(resultsArray);
       })
       .catch(function () {
+
       console.log('An error occurred');
       });
       }
+
         
    
 
@@ -43,7 +45,7 @@ function handleSubmit(event) {
     var form = document.querySelector('.js-search-form');
       form.addEventListener('submit', handleSubmit);
 
-  
+
 
 
 
