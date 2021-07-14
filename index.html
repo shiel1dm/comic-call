@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-<!-- Need to download and link the FontAwesome stylesheet/icon database if want the searchbar magnifying glass to show up--> 
+
     <link rel="stylesheet" href="./style.css">
   </head>
   <body> 
@@ -17,6 +17,7 @@
 
     <section class="container is-max-widescreen">
         <header class="title has-text-light has-text-centered">
+
          COMIC-CALL
         </header>
         <p class="subtitle has-text-danger is-size-1 is-family-code has-text-centered">
@@ -32,14 +33,22 @@
             </p>
             <form class="box has-background-danger">
               <div class="field">
-                <div class="control has-icons-left">
+
+              
+
+                <label class="label is-size-4 is-family-code">Search by Marvel character</label>
+                <div class="control">
+
                 <input class="input is-focused is large is-danger" type="search" placeholder="Search">
               </div>
             </div>
           <button class="button is-dark is-fullwidth is-centered is-family-code">Search</button>
         </form>
+
       </div>
     </section>
+      
+    <div id= "marvelImg">  </div>
 
     <section class="carousel columns block">
       <div class="container column is-centered is-three-quarters has-text-centered">
@@ -104,15 +113,15 @@
     </script>
 <!-- ***** This is the Carousel Demo template code on Bulma website that we can adjust if needed.***** -->   
   </body>
+
   <div class="container is-max-widescreen has-text-danger has-background-dark">
     <footer class= "is-size-4 is-family-code">
-        Stuff we're supposed to put in the footer
+       <h3 class="attribution">Data provided by Marvel. © 2021 MARVEL</h3>
     </footer>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="./script.js"></script>
+  
 </html>
-
-
 

@@ -1,5 +1,4 @@
 
-
 * {
 
     font-family: 'Bangers', cursive;
@@ -98,6 +97,57 @@ section {
     justify-content: center;
 }
 
+.bold {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.desc {
+    margin: 2px 5px 2px 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    font: size 20px;
+}
+
+Body {
+    margin: 2px 5px 2px 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    font: size 20px;
+}
+
+.marImg {
+    margin: auto;
+    display: block;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+#marvelImg {
+    margin: auto;
+    display: block;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome {
+    color: #ED1D24;
+}
+
+.title .subtitle {
+    text-align: center;
+}
 
 
 
