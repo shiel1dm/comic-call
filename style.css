@@ -9,13 +9,18 @@
 }
 
 .title {
-    font-size: 180px;
+    font-size: 140px;
 }
-.subtitle {
-    font-size: 40px;
+
+.pop {
+    font-size: 60px;
 }
-.section {
-    padding: 100px 0;
+
+
+
+section {
+    padding: 50px 0;
+
 }
 .charcaters {
     font-family: sans-serif;

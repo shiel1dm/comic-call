@@ -93,17 +93,19 @@ function handleSubmit() {
       console.log(urls)
 
 
+              let output = "";
+              output = `
+              <div class="container column is-centered is-two-thirds has-text-centered mt-0 py-0">
+              <div class="notification has-background-danger">
+                <h2 class= "title is-size-1"><strong class="has-text-white">${hero}</strong></h2>
+                <img class= "marImg" src=${image} alt="image" />
+                <p class= "desc Body has-text-white">${description}</p>
+               </div> 
+               </div>
+              `
+              container.innerHTML += output
+            })
 
-      let output = "";
-      output = `
-      <div>
-        <h2 class= "bold has-text-light">${hero}</h2>
-        <img class= "marImg" src=${image} alt="image" />
-        <p class= "desc Body  has-text-light">${description}</p>
-        </div> 
-      `
-      container.innerHTML += output
-      })
 }
        
 srcBtn.on('click', MarApi)
