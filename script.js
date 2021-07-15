@@ -35,7 +35,12 @@ function handleSubmit(input) {
 
     console.log('An error occurred');
     });
-}
+
+    
+
+  }
+
+
 
 
 
@@ -73,6 +78,8 @@ function MarApi(event){
       console.log(character[i]) //grabs random character from array
       console.log(hero)  // logs the character name that was chosen
       
+     
+      localStorage.setItem(hero, description);
       
       if(Boolean(description) === false){
         description = `Sorry, our database did not have the information requested, head on over to <a href='https://www.marvel.com'> Marvel's Official Site </a>`
@@ -97,5 +104,6 @@ function MarApi(event){
       container.innerHTML += output
       })
 };
+
 
 srcBtn.on('click', MarApi)
