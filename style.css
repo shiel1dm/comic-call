@@ -96,6 +96,7 @@ section {
 }
 .carousel .box-7{
     background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/024grt_com_crd_01.jpg"); 
+
     background-repeat: no-repeat;
     background-size: cover;
 }
