@@ -77,6 +77,7 @@ function MarApi(event){
       console.log(getrandInt(character.length)) //generates random int, but logging for test purposes.
       console.log(character[i]) //grabs random character from array
       console.log(hero)  // logs the character name that was chosen
+
       
      
       localStorage.setItem(hero, description);
@@ -107,3 +108,4 @@ function MarApi(event){
 
 
 srcBtn.on('click', MarApi)
+
