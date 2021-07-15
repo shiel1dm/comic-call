@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
     <link rel="stylesheet" href="./style.css">
   </head>
   <body> 
@@ -48,30 +50,51 @@
     </div>
     </section>
       
-    <div id= "marvelImg">  </div>
+    <div id= "marvelImg" class= 'has-text-light'>  </div>
+    <div id= "wikiResult" class= 'has-text-light'>  </div>
 
     <section class="columns block px-5 py-5">
       <div class="container column is-centered is-three-quarters has-text-centered">
         <div class="notification has-background-dark">
           <p class="pop has-text-light"> POPULAR CHARACTERS</p>
-            <p class="subtitle is-size-4 has-text-danger is-family-monospace">Click on an image</p>
+            <p class="subtitle is-size-4 has-text-danger is-family-monospace">Click on a character name</p>
         </div>
       </div>
     </section>
-<section class="characters has-background-dark" id="charcters">
-        <div class ="cantainer is-max-widescreen">
+<section class="characters has-background-dark" id="characters">
+        <div class ="container is-max-widescreen">
             <div class="wrapper">
                 <div class="carousel owl-carousel">
-                    <div class="box box-1">Pop</div>
-                    <div class="box box-2">wiki</div>
-                    <div class="box box-3">Pop</div>
-                    <div class="box box-4">wiki</div>
-                    <div class="box box-5">Pop</div>
-                    <div class="box box-6">wiki</div>
-                    <div class="box box-7">Pop</div>
-                    <div class="box box-8">wiki</div>
-                    <div class="box box-9">Popular</div>
-                    <div class="box box-10">wiki</div>
+                  <div class="box box-1">                  
+                    <p class="box-text"><a href="https://www.marvel.com/characters/black-widow-natasha-romanoff/on-screen/profile"target="_blank">Black Widow</a></p>
+                  </div>
+                  <div class="box box-2">                     
+                    <p class="box-text"><a href="https://www.marvel.com/characters/spider-man-peter-parker/on-screen"target="_blank">Spider-Man</a></p>             
+                  </div>
+                  <div class="box box-3">
+                    <p class="box-text"><a href="https://www.marvel.com/characters/scarlet-witch-wanda-maximoff/on-screen/profile" target="_blank">Scarlet Witch</a></p>
+                  </div>
+                  <div class="box box-4">
+                    <p class="box-text"><a href="https://www.marvel.com/characters/shang-chi" target="_blank">Shang-Chi</a></p>
+                  </div>
+                  <div class="box box-5">
+                    <p class="box-text"><a href="https://www.marvel.com/teams-and-groups/eternals" target="_blank">Eternals</a></p>
+                  </div>
+                  <div class="box box-6">
+                    <p class="box-text"><a href="https://www.marvel.com/characters/black-panther-t-challa/on-screen/profile" target="_blank">Black Panther</a></p>
+                  </div>
+                  <div class="box box-7">
+                    <p class="box-text"><a href="https://www.marvel.com/characters/groot/on-screen" target="_blank">Groot</a></p>
+                  </div>
+                  <div class="box box-8">
+                    <p class="box-text"><a href="https://www.marvel.com/characters/doctor-strange-stephen-strange/on-screen/profile" target="_blank">Doctor Strange</a></p>
+                  </div>
+                  <div class="box box-9">
+                    <p class="box-text"><a href="https://www.marvel.com/characters/hulk-bruce-banner/on-screen" target="_blank">Hulk aka Mr. Hulk</a></p>
+                  </div>
+                  <div class="box box-10">
+                    <p class="box-text"><a href="https://www.marvel.com/comics/discover/312/marvels-origin" target="_blank">Marvel's Origin</a></p>
+                  </div>
                 </div>
             </div>
         </div>
@@ -101,7 +124,7 @@ $(".carousel").owlCarousel({
 </script>
 
 
-<!-- ***** This is the Carousel Demo template code on Bulma website that we can adjust if needed or just create our own.***** -->
+
 <section class="characters has-background-dark" id="characters">
 
 </section>
@@ -112,7 +135,7 @@ $(".carousel").owlCarousel({
 			slidesToShow: 4
 		});
     </script>
-<!-- ***** This is the Carousel Demo template code on Bulma website that we can adjust if needed.***** -->   
+
   </body>
 
   <div class="container is-max-widescreen has-text-danger has-background-dark">

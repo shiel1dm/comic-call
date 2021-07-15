@@ -93,6 +93,7 @@ function handleSubmit() {
       console.log(urls)
 
 
+              //Output of the API call data to a div in order to render on the webpage.
               let output = "";
               output = `
               <div class="container column is-centered is-two-thirds has-text-centered mt-0 py-0">
@@ -109,7 +110,4 @@ function handleSubmit() {
 }
        
 srcBtn.on('click', MarApi)
-
-
-
-// maybe set a random into from the src results. fill the carosel. 
+ 
