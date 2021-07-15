@@ -80,7 +80,11 @@ function MarApi(event){
 
       
      
-      localStorage.setItem(hero, description);
+      localStorage.setItem(hero, description)
+        if(Boolean(description) === false) {
+          sorryDescription = `Sorry, our database did not have the information requested, head on over to <a href='https://www.marvel.com'> Marvel's Official Site </a>`
+          localStorage.setItem(hero, sorryDescription);
+        };
       
       if(Boolean(description) === false){
         description = `Sorry, our database did not have the information requested, head on over to <a href='https://www.marvel.com'> Marvel's Official Site </a>`
