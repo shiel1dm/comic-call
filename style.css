@@ -52,35 +52,67 @@ section {
     border-radius: 12px;
     box-shadow: 0px 5px 16px rgba(0,0, 0, 0.3);
 }
+
+.box-text{
+    position:relative;
+    bottom: 160px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+    color: white;
+}
+
 .carousel .box-1{
-    background-color: blue;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/011blw_com_crd_01.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .carousel .box-2{
-    background-color: red;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/005smp_com_crd_01.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .carousel .box-3{
-    background-color: wheat;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/012scw_com_crd_01.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .carousel .box-4{
-    background-color: blue;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/242shc_com_crd_01.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;;
 }
 .carousel .box-5{
-    background-color: red;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/eternals_com_crd_02.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .carousel .box-6{
-    background-color: wheat;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/007blp_com_crd_01_0.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .carousel .box-7{
-    background-color: blue;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/_020gga_com_crd_01_0.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .carousel .box-8{
-    background-color: red;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/009drs_com_crd_01.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .carousel .box-9{
-    background-color: wheat;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/006hbb_com_crd_01.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .carousel .box-10{
-    background-color: rgba(red,wheat, blue, alpha);
+    background-image: url("https://i.annihil.us/u/prod/marvel/i/mg/d/50/55084123775c2/clean.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .owl-dots{
     text-align: center;
@@ -117,7 +149,7 @@ section {
     font: size 20px;
 }
 
-Body {
+.Body {
     margin: 2px 5px 2px 5px;
     padding-left: 25px;
     padding-right: 25px;
