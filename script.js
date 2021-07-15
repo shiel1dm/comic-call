@@ -1,6 +1,6 @@
 srcBtn = $('.button')
 userInput= $('input')
-
+test= $('.marvelImg')
 publicKey = '77eadb0de3c81dae60d3ca584d03a73c'
 ts = '1'
 
@@ -29,12 +29,11 @@ function handleSubmit(input) {
     //resultsOnPage(resultsArray);
     text = resultsArray[0].snippet
     container.innerHTML += text
-    console.log(resultsArray[0].snippet);
+    
     })
     .catch(function () {
 
     console.log('An error occurred');
-    window.alert('An error has occurred')
     });
 }
 
@@ -42,10 +41,12 @@ function handleSubmit(input) {
 
 function MarApi(event){
   event.preventDefault()
-  
-  var comicUrl = `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${userInput.val()}&limit=100&ts=${ts}&apikey=${publicKey}&hash=${md5}`
+  test.empty()
+  var comicUrl = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${userInput.val()}&limit=100&ts=${ts}&apikey=${publicKey}&hash=${md5}`
   //We decided to go w/ StartsWith so a user might still find information, even though the character was misspelled
-  console.log('btn click works')
+  /** I would have liked to have cleared the contents of the first box if the search button was hit again.
+   But we didn't find the time to initialize that and felt it wasn't our most important goal.
+   */
   fetch(comicUrl,{
     method: 'GET',
     credentials:'same-origin',
@@ -54,14 +55,17 @@ function MarApi(event){
       return response.json();
     })
     .then(function(data){
+
       i = getrandInt(data.data.results.length)
       character= data.data.results
       hero= character[i].name
+      link= character[i].urls[1].url.trim()
       url = character[i].thumbnail.path
       ext = character[i].thumbnail.extension
       image= url+$.trim('/portrait_uncanny.'+ext)
       description= character[i].description
       urls= character[i].urls
+     
 
       handleSubmit(hero)
 
@@ -69,58 +73,29 @@ function MarApi(event){
       console.log(character[i]) //grabs random character from array
       console.log(hero)  // logs the character name that was chosen
       
-
-
-              let output = "";
-              output = `
-              <div class="container column is-centered is-two-thirds has-text-centered mt-0 py-0">
-              <div class="notification has-background-danger">
-                <h2 class= "title is-size-1"><strong class="has-text-white">${hero}</strong></h2>
-                <img class= "marImg" src=${image} alt="image" />
-                <p class= "desc Body has-text-white">${description}</p>
-               </div> 
-               </div>
-              `
-              container.innerHTML += output
-      })
-
-            function resultsOnPage(myArray){
-              myArray.forEach(function(item){
-              let itemTitle = item.title;
-              let itemSnippet = item.snippet;
-              let itemUrl = encodeURI(`https://en.wikipedia.org/wiki/${item.title}`);
-              console.log(itemTitle);
-              console.log(itemSnippet);
-              console.log(itemUrl);
-          
-              
-           
-          })
-            
-            resultsOnPage.insertAdjacentHTML('beforeend',
-              `<div class="resultItem">
-              <h3 class="resultTitle">
-              <a href="${itemUrl}" target="_blank" rel="noopener">${itemTitle}</a>
-              </h3>
-              <p class="resultSnippet"><a href="${itemUrl}"  target="_blank" rel="noopener">
-              ${itemSnippet}</a></p>
-              </div>`
-            );
-            };
-          ;
       
-      };
+      if(Boolean(description) === false){
+        description = `Sorry, our database did not have the information requested, head on over to <a href='https://www.marvel.com'> Marvel's Official Site </a>`
+        console.log(link)//This is the link from the Marvel API and the format I wanted to use, but b/c of time I wasn't able to format the link to work correctly. Logging this for future improvements
+      }
+        else{
+          console.log('Information pulled from Marvel API')
+        }
 
+        console.log(typeof description, Boolean(description), description)
 
-       
+      let output = "";
+      output = `
+      <div class="container column is-centered is-two-thirds has-text-centered mt-0 py-0">
+      <div class="notification has-background-danger">
+        <h2 class= "title is-size-1"><strong class="has-text-white">${hero}</strong></h2>
+        <img class= "marImg" src=${image} alt="image" />
+        <p class= "desc Body has-text-white">${description}</p>
+        </div> 
+        </div>
+      `
+      container.innerHTML += output
+      })
+};
 
-;
-
-
-
-       
-              srcBtn.on('click', MarApi)
-
-
-
-// maybe set a random into from the src results. fill the carosel. 
+srcBtn.on('click', MarApi)

@@ -22,7 +22,7 @@ section {
     padding: 50px 0;
 
 }
-.charcaters {
+.characters {
     font-family: sans-serif;
     background: white;
     color: black;
@@ -149,11 +149,7 @@ section {
     font: size 20px;
 }
 
-<<<<<<< HEAD
-.Body {
-=======
 .Body .searchmatch {
->>>>>>> b6199fee75df538ae4ec6fcc7963c96bacecb3fe
     margin: 2px 5px 2px 5px;
     padding-left: 25px;
     padding-right: 25px;
