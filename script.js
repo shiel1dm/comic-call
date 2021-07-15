@@ -1,6 +1,7 @@
 //Variables
 srcBtn = $('.button')
 userInput= $('input')
+
 publicKey = '77eadb0de3c81dae60d3ca584d03a73c'
 ts = '1'
 
@@ -16,52 +17,42 @@ function getrandInt(length){
 
 
 
-function handleSubmit() {
+function handleSubmit(input) {
 
-  //event.preventDefault();
-    //var inputValue = document.querySelector('.js-search-input').value; commenting out while I test functionality w/ my js
-    var searchQuery = userInput;
-    console.log(searchQuery);
-    var url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
-    console.log(url);
-  
-      fetch(url)
-      .then(function(response) {
-      return(response.json());
-      })
-      .then(function(data){
-      let resultsArray = data.query.search;
-      resultsOnPage(resultsArray);
-      console.log(resultsArray);
-      })
-      .catch(function () {
+  console.log(input);
+  var url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${input}`;
+  fetch(url)
+    .then(function(response){
+    return(response.json());
+    })
+    .then(function(data){
+    let resultsArray = data.query.search;
+    //resultsOnPage(resultsArray);
+    text = resultsArray[0].snippet
+    container.innerHTML += text
+    console.log(resultsArray[0].snippet);
+    })
+    .catch(function () {
 
-      console.log('An error occurred');
-      });
+    console.log('An error occurred');
+    window.alert('An error has occurred')
+    });
 }
 
-        
-   
+function resultsOnPage(myArray){
+    myArray.forEach(function(item){
+    let itemTitle = item.title;
+    let itemSnippet = item.snippet;
+    let itemUrl = encodeURI(`https://en.wikipedia.org/wiki/${item.title}`);
+    console.log(itemTitle);
+    console.log(itemSnippet);
+    console.log(itemUrl);
 
-      function resultsOnPage(myArray){
-          myArray.forEach(function(item){
-          let itemTitle = item.title;
-          let itemSnippet = item.snippet;
-          let itemUrl = encodeURI(`https://en.wikipedia.org/wiki/${item.title}`);
-          console.log(itemTitle);
-          console.log(itemSnippet);
-          console.log(itemUrl);
-      
-         
-        });
-      }
-      
-      
-  
-    var form = document.querySelector('.js-search-form');
-      //form.addEventListener('submit', handleSubmit);
+    
+  });
+}
 
-  function MarApi(event){
+function MarApi(event){
   event.preventDefault()
   
   var comicUrl = `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${userInput.val()}&limit=100&ts=${ts}&apikey=${publicKey}&hash=${md5}`
@@ -84,13 +75,12 @@ function handleSubmit() {
       description= character[i].description
       urls= character[i].urls
 
-      handleSubmit()
+      handleSubmit(hero)
 
       console.log(getrandInt(character.length)) //generates random int, but logging for test purposes.
       console.log(character[i]) //grabs random character from array
       console.log(hero)  // logs the character name that was chosen
-      console.log(image) //logs the final combined image URL
-      console.log(urls)
+      
 
 
               let output = "";
@@ -105,6 +95,18 @@ function handleSubmit() {
               `
               container.innerHTML += output
             })
+
+
+      let output = "";
+      output = `
+      <div>
+        <h2 class= "bold has-text-light">${hero}</h2>
+        <img class= "marImg" src=${image} alt="image" />
+        <p class= "desc Body has-text-light">${description}</p>
+        </div> 
+      `
+      container.innerHTML += output
+      })
 
 }
        
