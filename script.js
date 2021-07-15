@@ -1,4 +1,3 @@
-//Variables
 srcBtn = $('.button')
 userInput= $('input')
 
@@ -39,18 +38,7 @@ function handleSubmit(input) {
     });
 }
 
-function resultsOnPage(myArray){
-    myArray.forEach(function(item){
-    let itemTitle = item.title;
-    let itemSnippet = item.snippet;
-    let itemUrl = encodeURI(`https://en.wikipedia.org/wiki/${item.title}`);
-    console.log(itemTitle);
-    console.log(itemSnippet);
-    console.log(itemUrl);
 
-    
-  });
-}
 
 function MarApi(event){
   event.preventDefault()
@@ -94,23 +82,44 @@ function MarApi(event){
                </div>
               `
               container.innerHTML += output
-            })
-
-
-      let output = "";
-      output = `
-      <div>
-        <h2 class= "bold has-text-light">${hero}</h2>
-        <img class= "marImg" src=${image} alt="image" />
-        <p class= "desc Body has-text-light">${description}</p>
-        </div> 
-      `
-      container.innerHTML += output
       })
 
-}
+            function resultsOnPage(myArray){
+              myArray.forEach(function(item){
+              let itemTitle = item.title;
+              let itemSnippet = item.snippet;
+              let itemUrl = encodeURI(`https://en.wikipedia.org/wiki/${item.title}`);
+              console.log(itemTitle);
+              console.log(itemSnippet);
+              console.log(itemUrl);
+          
+              
+           
+          })
+            
+            resultsOnPage.insertAdjacentHTML('beforeend',
+              `<div class="resultItem">
+              <h3 class="resultTitle">
+              <a href="${itemUrl}" target="_blank" rel="noopener">${itemTitle}</a>
+              </h3>
+              <p class="resultSnippet"><a href="${itemUrl}"  target="_blank" rel="noopener">
+              ${itemSnippet}</a></p>
+              </div>`
+            );
+            };
+          ;
+      
+      };
+
+
        
-srcBtn.on('click', MarApi)
+
+;
+
+
+
+       
+              srcBtn.on('click', MarApi)
 
 
 
