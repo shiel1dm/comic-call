@@ -1,7 +1,7 @@
 //Variables
 srcBtn = $('.button')
 userInput= $('input')
-
+test = $('.desc')
 publicKey = '77eadb0de3c81dae60d3ca584d03a73c'
 ts = '1'
 
@@ -28,9 +28,9 @@ function handleSubmit(input) {
     .then(function(data){
     let resultsArray = data.query.search;
     //resultsOnPage(resultsArray);
-    text = resultsArray[0].snippet
-    container.innerHTML += text
-    console.log(resultsArray[0].snippet);
+    text = document.createTextNode(resultsArray[0].snippet)
+    test.append(text)
+    console.log(text);
     })
     .catch(function () {
 
@@ -83,30 +83,18 @@ function MarApi(event){
       
 
 
-              let output = "";
-              output = `
-              <div class="container column is-centered is-two-thirds has-text-centered mt-0 py-0">
-              <div class="notification has-background-danger">
-                <h2 class= "title is-size-1"><strong class="has-text-white">${hero}</strong></h2>
-                <img class= "marImg" src=${image} alt="image" />
-                <p class= "desc Body has-text-white">${description}</p>
-               </div> 
-               </div>
-              `
-              container.innerHTML += output
-            })
-
-
       let output = "";
       output = `
-      <div>
-        <h2 class= "bold has-text-light">${hero}</h2>
+      <div class="container column is-centered is-two-thirds has-text-centered mt-0 py-0">
+      <div class="notification has-background-danger">
+        <h2 class= "title is-size-1"><strong class="has-text-white">${hero}</strong></h2>
         <img class= "marImg" src=${image} alt="image" />
-        <p class= "desc Body has-text-light">${description}</p>
+        <p class= "desc Body has-text-white">${description}</p>
         </div> 
+        </div>
       `
       container.innerHTML += output
-      })
+            })
 
 }
        
