@@ -10,99 +10,102 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
     <link rel="stylesheet" href="./style.css">
   </head>
   <body> 
 
 
-    <section class="container is-max-widescreen">
+    <section class="container is-fluid pb-0 ">
         <header class="title has-text-light has-text-centered">
 
          COMIC-CALL
         </header>
-        <p class="subtitle has-text-danger is-size-1 is-family-code has-text-centered">
-          Welcome Marvel Fans!
-        </p>
+
       </div>
     </section>
 
-    <section class="section columns block px-0 py-0">
-      <div class="container column is-centered has-background-danger is-three-quarters has-text-centered">
-        <p class="subtitle is-centered  has-text-light">
-            Search your favorite Marvel characters <br>to learn where you can find more!
+    <section class="columns block mx-0 py-0 ">
+      <div class="container column is-centered is-two-thirds has-text-centered">
+        <div class="notification has-background-dark">
+          <p class="subtitle has-text-danger is-size-3 is-family-code has-text-centered">
+            Welcome Marvel Fans!
+          </p>
+          <p class="subtitle is-size-5 is-centered is-family-code has-text-light">
+            Search your favorite Marvel characters to learn where you can find more!
             </p>
-            <form class="box has-background-danger">
+            <form class="box has-background-dark">
               <div class="field">
-
-              
-
-                <label class="label is-size-4 is-family-code">Search by Marvel character</label>
                 <div class="control">
 
                 <input class="input is-focused is large is-danger" type="search" placeholder="Search">
               </div>
             </div>
-          <button class="button is-dark is-fullwidth is-centered is-family-code">Search</button>
+          <button class="button is-danger is-fullwidth is-centered is-family-code">Search</button>
         </form>
-
       </div>
+    </div>
     </section>
       
     <div id= "marvelImg" class= 'has-text-light'>  </div>
 
-    <section class="carousel columns block">
+    <section class="columns block px-5 py-5">
       <div class="container column is-centered is-three-quarters has-text-centered">
-        <div class="notification is-danger">
-          <p class="title is-size-1 has-text-light"> POPULAR CHARACTERS</p>
-            <p class="subtitle is-size-4 has-text-dark is-family-monospace">Click on an image</p>
+        <div class="notification has-background-dark">
+          <p class="pop has-text-light"> POPULAR CHARACTERS</p>
+            <p class="subtitle is-size-4 has-text-danger is-family-monospace">Click on an image</p>
         </div>
       </div>
     </section>
-  
+<section class="characters has-background-dark" id="charcters">
+        <div class ="cantainer is-max-widescreen">
+            <div class="wrapper">
+                <div class="carousel owl-carousel">
+                    <div class="box box-1">Pop</div>
+                    <div class="box box-2">wiki</div>
+                    <div class="box box-3">Pop</div>
+                    <div class="box box-4">wiki</div>
+                    <div class="box box-5">Pop</div>
+                    <div class="box box-6">wiki</div>
+                    <div class="box box-7">Pop</div>
+                    <div class="box box-8">wiki</div>
+                    <div class="box box-9">Popular</div>
+                    <div class="box box-10">wiki</div>
+                </div>
+            </div>
+        </div>
+</section>
+<script>
+$(".carousel").owlCarousel({
+  margin: 10,
+  loop: true,
+  autoplay: true,
+  autoplayTimeout: 1900, //1900 ms = 3 sec
+  autoplayHoverPause: true,
+  responsive: {
+  0:{
+    items: 1,
+    nav: false
+  },
+  500:{
+    items: 2,
+    nav: false
+  },
+  900:{
+    items: 3,
+    nav: false
+  }
+}
+});
+</script>
 
 
 <!-- ***** This is the Carousel Demo template code on Bulma website that we can adjust if needed or just create our own.***** -->
 <section class="characters has-background-dark" id="characters">
-        <div class=" container is-max-widescreen">
-            <div class="carousel">
-                <div class="card">
-                      <div class="box">
-                          <img src="#" alt="" >
-                          <div class="text">popular characters</div>
-                      </div>
-                </div>
-              <div class="card">
-                  <div class="box">
-                      <img src="#" alt="" >
-                      <div class="text">popular characters</div>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="box">
-                      <img src="#" alt="" >
-                      <div class="text">popular characters</div>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="box">
-                      <img src="#" alt="" >
-                      <div class="text">wikipidia</div>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="box">
-                      <img src="#" alt="" >
-                      <div class="text">wikipidia</div>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="box">
-                      <img src="#" alt="" >
-                      <div class="text">wikipidia</div>
-                  </div>
-              </div>
-            </div>
-        </div>
+
 </section>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
 		<script>

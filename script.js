@@ -83,6 +83,19 @@ function MarApi(event){
       
 
 
+              let output = "";
+              output = `
+              <div class="container column is-centered is-two-thirds has-text-centered mt-0 py-0">
+              <div class="notification has-background-danger">
+                <h2 class= "title is-size-1"><strong class="has-text-white">${hero}</strong></h2>
+                <img class= "marImg" src=${image} alt="image" />
+                <p class= "desc Body has-text-white">${description}</p>
+               </div> 
+               </div>
+              `
+              container.innerHTML += output
+            })
+
 
       let output = "";
       output = `
@@ -94,6 +107,7 @@ function MarApi(event){
       `
       container.innerHTML += output
       })
+
 }
        
 srcBtn.on('click', MarApi)
